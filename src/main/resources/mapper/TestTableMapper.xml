@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thy.demo.mapper.TestTableMapper">
+  <resultMap id="ResultMap" type="com.thy.demo.entity.TestTable">
+    <id property="personid" column="person_id" />
+    <result property="personname" column="person_name" />
+    <result property="birthday" column="birthday" />
+  </resultMap>
+  <select id="select" parameterType="com.thy.demo.entity.tableCond" resultMap="ResultMap">
+    SELECT
+      *
+    FROM public.test_table
+  </select>
+</mapper>
